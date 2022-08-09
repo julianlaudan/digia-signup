@@ -4,14 +4,88 @@
 
 /** =========== **/
 /** Make a container with max width determined by variables **/
-@mixin make-container($padding: grid-variables.$grid-outer-gutters) {
-    padding-left: $padding;
-    padding-right: $padding;
-    position: relative;
-    width: 100%;
+
+// -----------------------------------------------------------------------------
+// Grid Mixins
+// -----------------------------------------------------------------------------
+// Generate semantic grid columns with these mixins.
+
+@use "sass:map";
+@use "sass:math";
+@use "./grid.variables" as *;
+@use "./grid.breakpoints" as *;
+
+// ----------------------------------------------------
+
+@mixin make-container(
+  $gutters: $grid-outer-gutter-widths,
+  $breakpoints: $grid-breakpoints
+) {
+  margin-left: auto;
+  margin-right: auto;
+  @each $breakpoint, $gutter in $gutters {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      padding-left: ($gutter);
+      padding-right: ($gutter);
+    }
+  }
 }
-@mixin make-container--max-width($maxWidth: grid-variables.$grid-max-width) {
-  @include make-container;
-  margin: 0 auto;
-  max-width: $maxWidth;
+
+// Define the maximum width of the container in a media query for each breakpoint
+@mixin make-container-max-width(
+  $max-widths: $container-max-widths,
+  $breakpoints: $grid-breakpoints
+) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: 100%;
+      width: $container-max-width;
+    }
+  }
+}
+
+@mixin make-row(
+  $gutters: $grid-gutter-widths,
+  $breakpoints: $grid-breakpoints
+) {
+  @include clearfix();
+  @each $breakpoint, $gutter in $gutters {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      margin-left: ($gutter / -2);
+      margin-right: ($gutter / -2);
+    }
+  }
+}
+
+@mixin make-col(
+  $gutters: $grid-gutter-widths,
+  $breakpoints: $grid-breakpoints
+) {
+  float: left;
+  min-height: 1px;
+  position: relative;
+  @each $breakpoint, $gutter in $gutters {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      padding-left: ($gutter / 2);
+      padding-right: ($gutter / 2);
+    }
+  }
+
+  // rlt-changes
+  // -----------------------------------
+  [dir="rtl"] & {
+    float: right;
+  }
+}
+
+@mixin make-col-span($size, $columns: $grid-columns) {
+  width: math.percentage($size / $columns);
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  margin-left: percentage($size / $columns);
+}
+
+@mixin make-col-offset-right($size, $columns: $grid-columns) {
+  margin-right: percentage($size / $columns);
 }

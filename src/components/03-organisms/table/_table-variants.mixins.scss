@@ -9,6 +9,7 @@
     $block: "&";
   }
   border-collapse: map.get($variables, "border-collapse");
+  table-layout: map.get($variables, "table-layout");
   text-align: map.get($variables, "text-align");
   width: map.get($variables, "width");
 
@@ -25,6 +26,7 @@
   th {
     height: map.get($variables, "cell--height");
     line-height: map.get($variables, "cell--line-height");
-    padding: map.get($variables, "cell--padding");
+    padding: map.get($variables, "cell--padding-y")
+      map.get($variables, "cell--padding-x");
   }
 }

@@ -1,0 +1,21 @@
+/** ===== **/
+/** inputs **/
+/** ===== **/
+@use "./../../00-base/variables/" as *;
+@use "./../../00-base/functions/" as *;
+@use "./../../00-base/grid/_grid.mixins" as grid-mixins;
+@use "./input-core.mixins" as input-core;
+@use "./input-variants.mixins" as input-variants;
+@use "./input-themes.mixins" as input-themes;
+@use "./input.variables" as input-variables;
+/** ===== **/
+.#{$namespace}-input {
+  @include input-core.core;
+  @include input-variants.input-variant(input-variables.$input--default);
+  @include input-themes.input-theme(input-variables.$input--default);
+}
+
+.#{$namespace}-table .#{$namespace}-input {
+  @include input-variants.input-variant(input-variables.$input--table);
+  @include input-themes.input-theme(input-variables.$input--table);
+}

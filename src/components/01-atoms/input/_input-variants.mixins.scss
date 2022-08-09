@@ -1,0 +1,23 @@
+/** ===== **/
+/** input variants mixins **/
+/** ===== **/
+@use "sass:map";
+/** ===== **/
+
+/** ===== **/
+/** Default input **/
+@mixin input-variant($variables, $block: null) {
+  @if $block == null {
+    $block: "&";
+  }
+  border-width: map.get($variables, "border-width");
+  display: map.get($variables, "display");
+  font-size: map.get($variables, "font-size");
+  font-weight: map.get($variables, "font-weight");
+  height: map.get($variables, "height");
+  line-height: map.get($variables, "line-height");
+  padding: map.get($variables, "padding");
+  text-align: map.get($variables, "text-align");
+  vertical-align: map.get($variables, "vertical-align");
+  width: map.get($variables, "width");
+}

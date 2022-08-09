@@ -1,0 +1,32 @@
+/** ===== **/
+/** inputs **/
+/** ===== **/
+@use "sass:map";
+@use "./../../00-base/colors/colors.variables" as *;
+@use "./../../00-base/typography/typography.variables" as typography-variables;
+@use "./../../00-base/functions/" as *;
+/** ===== **/
+
+$input--height: rem(40) !default;
+$input--font-size: rem(16) !default;
+
+$input--default: (
+  bg-color: $color-alabaster,
+  border-color: $color-borders,
+  border-style: solid,
+  border-width: rem(1),
+  color: $color-gray,
+  height: $input--height,
+  font-size: $input--font-size,
+  font-weight: map.get(typography-variables.$font-weight-values, regular),
+  line-height: $input--height,
+  padding: 0 rem(16),
+  width: auto,
+  vertical-align: middle,
+  focus--border-color: $color-azure,
+  active--border-color: $color-azure,
+) !default;
+
+$input--table: (
+  width: 100%,
+) !default;

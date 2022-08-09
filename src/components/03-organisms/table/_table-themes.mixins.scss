@@ -8,6 +8,16 @@
     $block: "&";
   }
 
+  [data-js-action="edit-row"] {
+    white-space: nowrap;
+    button {
+      margin: map.get($variables, "actions--spacing");
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+
   th {
     color: map.get($variables, "heading--color");
   }
@@ -34,7 +44,7 @@
         background-color: map.get($variables, "cell--bg-color--odd");
       }
     }
-    &:hover {
+    &:not(.digi-table__tr--editable):hover {
       td,
       th {
         background-color: map.get($variables, "cell--hover-bg-color");

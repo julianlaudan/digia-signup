@@ -20,9 +20,14 @@ $form--default: (
 $form--add-user: (
   align-items: center,
   bg-color: $color-white,
+  flex-flow--sm: wrap,
   flex-flow: row wrap,
   padding: rem(16),
+  width: 100%,
   item--margin: 0 rem(16) 0 0,
+  item--margin--sm: 0 0 rem(16) 0,
+  item--width: auto,
+  item--width--sm: 100%,
   submit--margin: 0 0 0 auto,
 ) !default;
 

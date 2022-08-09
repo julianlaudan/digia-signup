@@ -1,6 +1,7 @@
 /** ===== **/
 /** tables **/
 /** ===== **/
+@use "sass:map";
 @use "./../../00-base/variables/" as *;
 @use "./../../00-base/functions/" as *;
 @use "./../../00-base/grid/_grid.mixins" as grid-mixins;
@@ -10,6 +11,14 @@
 /** ===== **/
 .#{$namespace}-table {
   @include table-variants.table-variant(table-variables.$table--default);
+  .#{$namespace}-table__tr--editable .#{$namespace}-table__td {
+    padding: map.get(table-variables.$table--participants, "cell--padding-y")
+      rem(8);
+  }
+  &-wrapper {
+    max-width: 100%;
+    overflow-x: scroll;
+  }
 }
 .#{$namespace}-table--participants {
   @include table-variants.table-variant(table-variables.$table--participants);

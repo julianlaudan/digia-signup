@@ -1,6 +1,10 @@
 import React from "react";
 
-const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
+const EditableRow = ({
+  editFormData,
+  handleEditFormChange,
+  handleCancelClick,
+}) => {
   return (
     <tr
       className="digi-table__tr digi-table__tr--editable"
@@ -39,11 +43,18 @@ const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) 
           onChange={handleEditFormChange}
         />
       </td>
-      <td className="digi-table__td digi-table__td--edit-actions">
-        <button type="submit" className="digi-button digi-button--icon-only">
+      <td
+        className="digi-table__td digi-table__td--edit-actions"
+        data-js-action="edit-row"
+      >
+        <button type="submit" className="digi-button digi-button--submit digi-button--azure">
           <span className="digi-button__text">Save</span>
         </button>
-        <button type="button" className="digi-button digi-button--icon-only" onClick={handleCancelClick}>
+        <button
+          type="button"
+          className="digi-button digi-button--inverted-azure"
+          onClick={handleCancelClick}
+        >
           <span className="digi-button__text">Cancel</span>
         </button>
       </td>

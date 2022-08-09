@@ -1,6 +1,54 @@
 /** Grid Variables **/
 /** ============== **/
-@use "./../functions/" as *;
+@use "sass:math";
+@use "./../../00-base/functions/" as *;
 /** ============== **/
-$grid-max-width: rem(912);
-$grid-outer-gutters: rem(32);
+
+// -----------------------------------------------------------------------------
+// Grid breakpoints
+// -----------------------------------------------------------------------------
+// Define the minimum and maximum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  // Mobile screen
+  xs: 0,
+  // Mobile screen
+  sm: rem(480),
+  // Tablet (portrait)
+  md: rem(712),
+  // Tablet (landscape)
+  lg: rem(1024),
+  // Desktop
+  xl: rem(1280),
+  // X-Large (Desktop larger than Notebooks)
+  xxl: rem(1535)
+) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  xs: 100%,
+  lg: rem(976),
+) !default;
+
+// Grid gutters
+//
+$grid-gutter-widths: (
+  xs: rem(12),
+  md: rem(24),
+  xl: rem(48),
+) !default;
+
+$grid-outer-gutter-widths: (
+  xs: rem(16),
+  sm: rem(24),
+  md: rem(32),
+  lg: rem(32),
+) !default;
+
+// Grid columns
+//
+// Set the number of columns.
+$grid-columns: 12 !default;

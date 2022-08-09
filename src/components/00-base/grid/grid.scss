@@ -6,5 +6,5 @@
 /** ==== **/
 .#{$namespace}-container {
     @include grid-mixins.make-container;
-    @include grid-mixins.make-container--max-width;
+    @include grid-mixins.make-container-max-width;
 }

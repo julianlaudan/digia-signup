@@ -167,48 +167,49 @@ const App = () => {
             <span className="digi-button__text">Add new</span>
           </button>
         </form>
-
-        <form
-          className="digi-form digi-form--participants"
-          data-js-form="participants"
-          onSubmit={handleEditFormSubmit}
-        >
-          <table
-            className="digi-table digi-table--participants"
-            data-js-table="participants"
+        <div className="digi-table-wrapper">
+          <form
+            className="digi-form digi-form--participants"
+            data-js-form="participants"
+            onSubmit={handleEditFormSubmit}
           >
-            <thead className="digi-table__thead">
-              <tr className="digi-table__tr">
-                <th className="digi-table__th">Name</th>
-                <th className="digi-table__th">E-Mail</th>
-                <th className="digi-table__th">Phone</th>
-                <th className="digit-table__th">
-                  <span className="is--visually-hidden">Actions</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody className="digi-table__tbody">
-              {users.map((user) => (
-                <Fragment>
-                  {/* EditableRow only to appear if the editUserId from the function matched the user.id */}
-                  {editUserId === user.id ? (
-                    <EditableRow
-                      editFormData={editFormData}
-                      handleEditFormChange={handleEditFormChange}
-                      handleCancelClick={handleCancelClick}
-                    />
-                  ) : (
-                    <ReadOnlyRow
-                      user={user}
-                      handleEditClick={handleEditClick}
-                      handleDeleteClick={handleDeleteClick}
-                    />
-                  )}
-                </Fragment>
-              ))}
-            </tbody>
-          </table>
-        </form>
+            <table
+              className="digi-table digi-table--participants"
+              data-js-table="participants"
+            >
+              <thead className="digi-table__thead">
+                <tr className="digi-table__tr">
+                  <th className="digi-table__th">Name</th>
+                  <th className="digi-table__th">E-Mail</th>
+                  <th className="digi-table__th">Phone</th>
+                  <th className="digit-table__th">
+                    <span className="is--visually-hidden">Actions</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="digi-table__tbody">
+                {users.map((user) => (
+                  <Fragment>
+                    {/* EditableRow only to appear if the editUserId from the function matched the user.id */}
+                    {editUserId === user.id ? (
+                      <EditableRow
+                        editFormData={editFormData}
+                        handleEditFormChange={handleEditFormChange}
+                        handleCancelClick={handleCancelClick}
+                      />
+                    ) : (
+                      <ReadOnlyRow
+                        user={user}
+                        handleEditClick={handleEditClick}
+                        handleDeleteClick={handleDeleteClick}
+                      />
+                    )}
+                  </Fragment>
+                ))}
+              </tbody>
+            </table>
+          </form>
+        </div>
       </div>
     </main>
   );

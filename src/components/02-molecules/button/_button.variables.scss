@@ -1,0 +1,67 @@
+/** ===== **/
+/** buttons **/
+/** ===== **/
+@use "sass:map";
+@use "./../../00-base/colors/colors.variables" as *;
+@use "./../../00-base/typography/typography.variables" as typography-variables;
+@use "./../../00-base/functions/" as *;
+/** ===== **/
+
+$button--height: rem(40) !default;
+$button--font-size: rem(16) !default;
+
+$button--default: (
+  align-items: center,
+  bg-color: $color-gallery,
+  border-color: $color-gallery,
+  color: $color-boulder,
+  cursor: pointer,
+  display: inline-flex,
+  height: $button--height,
+  font-size: $button--font-size,
+  font-weight: map.get(typography-variables.$font-weight-values, bold),
+  line-height: $button--height,
+  padding: 0 rem(24),
+  width: auto,
+  vertical-align: middle,
+  hover--bg-color: $color-azure,
+  hover--border-color: $color-hit-gray,
+  hover--color: $color-white,
+) !default;
+
+$button--azure: (
+  bg-color: $color-azure,
+  border-color: $color-azure,
+  border-style: solid,
+  border-width: rem(2),
+  color: $color-white,
+  hover--bg-color: $color-white,
+  hover--border-color: $color-azure,
+  hover--color: $color-azure,
+) !default;
+
+$button--inverted-azure: (
+  bg-color: $color-gallery,
+  border-color: $color-gallery,
+  border-style: solid,
+  border-width: rem(2),
+  color: $color-azure,
+  hover--bg-color: $color-boulder,
+  hover--border-color: $color-boulder,
+  hover--color: $color-white,
+) !default;
+
+$button--icon-only: (
+  align-items: center,
+  bg-color: $color-transparent,
+  border-width: 0,
+  color: $color-gray,
+  display: inline-flex,
+  font-size: rem(24),
+  height: rem(32),
+  justify-content: center,
+  padding: 0,
+  width: rem(32),
+  hover--bg-color: $color-transparent,
+  hover--color: $color-azure,
+) !default;

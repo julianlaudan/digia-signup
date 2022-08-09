@@ -1,0 +1,10 @@
+/** ===== **/
+/** button core styles **/
+/** ===== **/
+@mixin core {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  background: none;
+  border-radius: 0;
+}

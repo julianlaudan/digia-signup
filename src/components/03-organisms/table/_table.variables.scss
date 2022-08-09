@@ -13,18 +13,20 @@ $table--default: (
 ) !default;
 
 $table--participants: (
+  width: 100%,
   cell--bg-color--even: $color-white,
   cell--bg-color--odd: $color-white,
   cell--hover-bg-color: $color-alabaster,
   cell--font-size: rem(16),
   cell--height: rem(72),
   cell--line-height: rem(24),
-  cell--padding: rem(24),
+  cell--padding-y: rem(24),
+  cell--padding-x: rem(24),
   heading--color: $color-boulder,
   heading--font-size: rem(14),
   heading--font-weight: map.get(typography-variables.$font-weight-values, bold),
   row--border-color: $color-borders,
   row--border-style: solid,
   row--border-width: rem(1) 0 0 0,
-  width: 100%,
+  actions--spacing: 0 0 0 rem(24),
 ) !default;

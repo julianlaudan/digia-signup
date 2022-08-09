@@ -2,6 +2,7 @@
 /** Form variants mixins **/
 /** ===== **/
 @use "sass:map";
+@use "./../../00-base/grid/" as *;
 /** ===== **/
 @mixin form-variant($variables, $block: null) {
   @if $block == null {
@@ -9,11 +10,20 @@
   }
   align-items: map.get($variables, "align-items");
   display: map.get($variables, "display");
+  flex-flow: map.get($variables, "flex-flow--sm");
   justify-content: map.get($variables, "justify-content");
   padding: map.get($variables, "padding");
   width: map.get($variables, "width");
+  @include media-breakpoint-up(lg) {
+    flex-flow: map.get($variables, "flex-flow");
+  }
   input {
-    margin: map.get($variables, "item--margin");
+    width: map.get($variables, "item--width--sm");
+    margin: map.get($variables, "item--margin--sm");
+    @include media-breakpoint-up(lg) {
+      margin: map.get($variables, "item--margin");
+      width: map.get($variables, "item--width");
+    }
   }
   [type="submit"] {
     margin: map.get($variables, "submit--margin");

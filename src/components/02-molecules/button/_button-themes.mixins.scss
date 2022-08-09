@@ -1,0 +1,34 @@
+/** ===== **/
+/** button theme mixins **/
+/** ===== **/
+@use "sass:map";
+/** ===== **/
+@mixin button-theme($variables, $block: null) {
+  @if $block == null {
+    $block: "&";
+  }
+  background-color: map.get($variables, "bg-color");
+  border-color: map.get($variables, "border-color");
+  border-style: map.get($variables, "border-style");
+  color: map.get($variables, "color");
+  &:hover {
+    background-color: map.get($variables, "hover--bg-color");
+    border-color: map.get($variables, "hover--border-color");
+    color: map.get($variables, "hover--color");
+  }
+}
+
+@mixin button-theme--icon-only($variables, $block: null) {
+  @if $block == null {
+    $block: "&";
+  }
+  background-color: map.get($variables, "bg-color");
+  border-color: map.get($variables, "border-color");
+  border-style: map.get($variables, "border-style");
+  color: map.get($variables, "color");
+  &:hover {
+    background-color: map.get($variables, "hover--bg-color");
+    border-color: map.get($variables, "hover--border-color");
+    color: map.get($variables, "hover--color");
+  }
+}

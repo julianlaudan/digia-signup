@@ -14,10 +14,13 @@
 
 /** ========================= **/
 /** 01-atoms **/
+@use "./../../components/01-atoms/icon/icon";
 @use "./../../components/01-atoms/heading/heading";
 @use "./../../components/01-atoms/image/image";
+@use "./../../components/01-atoms/input/input";
 /** ========================= **/
 /** 02-molecules **/
+@use "./../../components/02-molecules/button/button";
 @use "./../../components/02-molecules/logo/logo";
 
 /** ========================= **/

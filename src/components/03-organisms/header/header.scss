@@ -11,6 +11,7 @@
   padding: header-variables.$header--padding-y
     header-variables.$header--padding-x;
   &__container {
-    @include grid-mixins.make-container--max-width;
+    @include grid-mixins.make-container;
+    @include grid-mixins.make-container-max-width;
   }
 }
