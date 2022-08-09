@@ -1,0 +1,19 @@
+/** ================= **/
+/** Heading mixins **/
+/** ================= **/
+@use "sass:map";
+@use "./heading.variables" as heading-variables;
+/** ================= **/
+@mixin heading {
+  display: block;
+  font-family: heading-variables.$heading--font-family;
+  font-weight: heading-variables.$heading--font-weight;
+}
+
+@mixin heading-variant($variables) {
+    color: map.get($variables, "color");
+    display: map.get($variables, "display");
+    font-size: map.get($variables, "font-size");
+    font-weight: map.get($variables, "font-weight");
+    margin: map.get($variables, "margin");
+}

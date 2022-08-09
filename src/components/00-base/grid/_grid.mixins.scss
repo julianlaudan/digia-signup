@@ -1,0 +1,17 @@
+/** Grid Mixins **/
+/** =========== **/
+@use "./grid.variables" as grid-variables;
+
+/** =========== **/
+/** Make a container with max width determined by variables **/
+@mixin make-container($padding: grid-variables.$grid-outer-gutters) {
+    padding-left: $padding;
+    padding-right: $padding;
+    position: relative;
+    width: 100%;
+}
+@mixin make-container--max-width($maxWidth: grid-variables.$grid-max-width) {
+  @include make-container;
+  margin: 0 auto;
+  max-width: $maxWidth;
+}

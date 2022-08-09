@@ -1,0 +1,19 @@
+/** ================= **/
+/** Typography Mixins **/
+/** ================= **/
+@use "sass:string";
+@use "sass:map";
+@use "./../variables/" as *;
+@use "./typography.variables" as typography-variables;
+/** ================= **/
+@mixin core-styles() {
+  * {
+    font-family: typography-variables.$font-family--default;
+  }
+  body,
+  p,
+  .#{$namespace}-typography {
+    color: typography-variables.$color;
+    line-height: typography-variables.$line-height;
+  }
+}

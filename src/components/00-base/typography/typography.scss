@@ -1,0 +1,7 @@
+/** ================= **/
+/** Typography Styles **/
+/** ================= **/
+@use "./../variables/" as *;
+@use "./typography.mixins" as typography-mixins;
+/** ================= **/
+@include typography-mixins.core-styles;

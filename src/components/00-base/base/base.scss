@@ -1,0 +1,11 @@
+/** ================ **/
+/** Body base styles **/
+/** ================ **/
+@use "sass:string";
+@use "./../variables/" as *;
+@use "./base.variables" as base-variables;
+/** ================ **/
+body,
+.#{$namespace}-body {
+  background-color: base-variables.$body--bg-color;
+}

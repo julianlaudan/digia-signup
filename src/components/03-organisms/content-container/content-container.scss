@@ -1,0 +1,16 @@
+/** ================= **/
+/** Content Container **/
+/** ================= **/
+@use "./../../00-base/variables/" as *;
+@use "./../../00-base/functions/" as *;
+@use "./../../00-base/grid/_grid.mixins" as grid-mixins;
+@use "./content-container.variables" as content-container-variables;
+/** ================= **/
+.#{$namespace}-content {
+  background-color: content-container-variables.$content-container--bg-color;
+  padding: content-container-variables.$content-container--padding-y
+    content-container-variables.$content-container--padding-x;
+  &__container {
+    @include grid-mixins.make-container--max-width;
+  }
+}

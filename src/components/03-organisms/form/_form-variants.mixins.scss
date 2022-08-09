@@ -1,0 +1,21 @@
+/** ===== **/
+/** Form variants mixins **/
+/** ===== **/
+@use "sass:map";
+/** ===== **/
+@mixin form-variant($variables, $block: null) {
+  @if $block == null {
+    $block: "&";
+  }
+  align-items: map.get($variables, "align-items");
+  display: map.get($variables, "display");
+  justify-content: map.get($variables, "justify-content");
+  padding: map.get($variables, "padding");
+  width: map.get($variables, "width");
+  input {
+    margin: map.get($variables, "item--margin");
+  }
+  [type="submit"] {
+    margin: map.get($variables, "submit--margin");
+  }
+}

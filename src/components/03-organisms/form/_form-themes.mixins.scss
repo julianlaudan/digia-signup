@@ -1,0 +1,11 @@
+/** ===== **/
+/** Form theme mixins **/
+/** ===== **/
+@use "sass:map";
+/** ===== **/
+@mixin form-theme($variables, $block: null) {
+  @if $block == null {
+    $block: "&";
+  }
+  background-color: map.get($variables, "bg-color");
+}

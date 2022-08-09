@@ -1,0 +1,44 @@
+/** ===== **/
+/** table theme mixins **/
+/** ===== **/
+@use "sass:map";
+/** ===== **/
+@mixin table-theme($variables, $block: null) {
+  @if $block == null {
+    $block: "&";
+  }
+
+  th {
+    color: map.get($variables, "heading--color");
+  }
+
+  td {
+    color: map.get($variables, "cell--color--even");
+  }
+
+  td,
+  th {
+    background-color: map.get($variables, "cell--bg-color--even");
+  }
+
+  :not(thead) tr {
+    border-color: map.get($variables, "row--border-color");
+    border-style: map.get($variables, "row--border-style");
+    border-width: map.get($variables, "row--border-width");
+    &:nth-of-type(odd) {
+      td {
+        color: map.get($variables, "cell--color--odd");
+      }
+      td,
+      th {
+        background-color: map.get($variables, "cell--bg-color--odd");
+      }
+    }
+    &:hover {
+      td,
+      th {
+        background-color: map.get($variables, "cell--hover-bg-color");
+      }
+    }
+  }
+}

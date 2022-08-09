@@ -1,0 +1,16 @@
+/** ============= **/
+/** Header styles **/
+/** ============= **/
+@use "sass:string";
+@use "./../../00-base/grid/grid.mixins" as grid-mixins;
+@use "./../../00-base/variables/" as *;
+@use "./header.variables" as header-variables;
+/** ============= **/
+.#{$namespace}-header {
+  background-color: header-variables.$header--bg-color;
+  padding: header-variables.$header--padding-y
+    header-variables.$header--padding-x;
+  &__container {
+    @include grid-mixins.make-container--max-width;
+  }
+}

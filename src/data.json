@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Max Mustermann",
+      "phone": "+49 123 456789",
+      "email": "max.mustermann@domain.tld"
+    },
+    {
+      "id": 2,
+      "name": "Matti Meikäläinen",
+      "phone": "+358 123 456789",
+      "email": "matti.meikalainen@domain.tld"
+    },
+    {
+      "id": 3,
+      "name": "John Doe",
+      "phone": "+1 234 56789",
+      "email": "john.doe@domain.tld"
+    },
+    {
+      "id": 4,
+      "name": "Kalle Medelsvensson",
+      "phone": "+46 789 1234",
+      "email": "kalle.medelsvensson@domain.tld"
+    },
+    {
+      "id": 5,
+      "name": "Jan Jansen",
+      "phone": "+31 234 56789",
+      "email": "jan.jansen@domain.tld"
+    },
+    {
+        "id": 6,
+        "name": "Erika Musterfrau",
+        "phone": "+49 170 12345",
+        "email": "erika.musterfau@domain.tld"
+    }
+  ]
