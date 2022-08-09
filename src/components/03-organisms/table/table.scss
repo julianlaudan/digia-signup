@@ -1,0 +1,17 @@
+/** ===== **/
+/** tables **/
+/** ===== **/
+@use "./../../00-base/variables/" as *;
+@use "./../../00-base/functions/" as *;
+@use "./../../00-base/grid/_grid.mixins" as grid-mixins;
+@use "./table-variants.mixins" as table-variants;
+@use "./table-themes.mixins" as table-themes;
+@use "./table.variables" as table-variables;
+/** ===== **/
+.#{$namespace}-table {
+  @include table-variants.table-variant(table-variables.$table--default);
+}
+.#{$namespace}-table--participants {
+  @include table-variants.table-variant(table-variables.$table--participants);
+  @include table-themes.table-theme(table-variables.$table--participants);
+}

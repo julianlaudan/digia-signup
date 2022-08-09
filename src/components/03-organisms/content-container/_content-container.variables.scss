@@ -1,0 +1,8 @@
+/** =========================== **/
+/** Content Container variables **/
+/** =========================== **/
+@use "./../../00-base/functions/" as *;
+/** =========================== **/
+$content-container--bg-color: transparent !default;
+$content-container--padding-x: 0 !default;
+$content-container--padding-y: rem(64) !default;

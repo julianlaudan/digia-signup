@@ -1,0 +1,11 @@
+/** ==== **/
+/** Image **/
+/** ==== **/
+@use "./../../00-base/variables/" as *;
+@use "./image.variables" as image-variables;
+/** ==== **/
+.#{$namespace}-image--logo {
+  display: block;
+  height: auto;
+  width: image-variables.$image--logo-width;
+}

@@ -1,0 +1,10 @@
+/** ================ **/
+/** Header variables **/
+/** ================ **/
+@use "./../../00-base/colors/colors.variables" as *;
+@use "./../../00-base/functions/" as *;
+/** ================ **/
+
+$header--bg-color: $color-hit-gray !default;
+$header--padding-x: 0 !default;
+$header--padding-y: rem(32) !default;

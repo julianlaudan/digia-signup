@@ -1,0 +1,42 @@
+/** ==================== **/
+/** Typography variables **/
+/** ==================== **/
+@use "sass:string";
+@use "sass:map";
+/** ==================== **/
+$root-font-size: 16px !default;
+$color: #505050 !default;
+$line-height: rem(24) !default;
+
+$font-family--default: "HelveticaNeue-Light", "Helvetica Neue Light",
+  "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$font-family--icons: "digiIcons" !default;
+$font-style--normal: normal !default;
+
+$font-weight-values: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+) !default;
+
+$fonts: (
+    "name": $font-family--default,
+    "style": $font-style--normal,
+    "weight": map.get($font-weight-values, light),
+  ),
+  (
+    "name": $font-family--default,
+    "style": $font-style--normal,
+    "weight": map.get($font-weight-values, regular),
+  ),
+  (
+    "name": $font-family--default,
+    "style": $font-style--normal,
+    "weight": map.get($font-weight-values, medium),
+  ),
+  (
+    "name": $font-family--default,
+    "style": $font-style--normal,
+    "weight": map.get($font-weight-values, bold),
+  ) !default;

@@ -1,0 +1,22 @@
+/** ===== **/
+/** Forms **/
+/** ===== **/
+@use "./../../00-base/variables/" as *;
+@use "./../../00-base/functions/" as *;
+@use "./../../00-base/grid/_grid.mixins" as grid-mixins;
+@use "./form-variants.mixins" as form-variants;
+@use "./form-themes.mixins" as form-themes;
+@use "./form.variables" as form-variables;
+/** ===== **/
+.#{$namespace}-form {
+  @include form-variants.form-variant(form-variables.$form--default);
+}
+.#{$namespace}-form--add-user {
+  @include form-variants.form-variant(form-variables.$form--add-user);
+  @include form-themes.form-theme(form-variables.$form--add-user);
+}
+
+.#{$namespace}-form--participants {
+  @include form-variants.form-variant(form-variables.$form--participants);
+  @include form-themes.form-theme(form-variables.$form--participants);
+}

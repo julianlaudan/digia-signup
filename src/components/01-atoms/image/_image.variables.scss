@@ -1,0 +1,7 @@
+/** ==== **/
+/** Image Variables **/
+/** ==== **/
+@use "./../../00-base/functions/" as *;
+
+$image--logo-height: rem(32) !default;
+$image--logo-width: rem(32) !default;

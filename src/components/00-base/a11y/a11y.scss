@@ -1,0 +1,10 @@
+/** ============= **/
+/** Accessibility **/
+@use "./a11y.mixins" as a11y-mixins;
+/** ============== **/
+
+/** Hidden elements, screen-reader only **/
+.sr-only,
+[data-type="sr-only"] {
+  @include mixins.sr-only;
+}

@@ -1,0 +1,33 @@
+/** ================= **/
+/** Heading variables **/
+/** ================= **/
+@use "sass:map";
+@use "./../../00-base/colors/colors.variables" as *;
+@use "./../../00-base/variables/" as *;
+@use "./../../00-base/functions/" as *;
+@use "./../../00-base/typography/" as typography-variables;
+/** ================= **/
+$heading--font-family: typography-variables.$font-family--default;
+$heading--font-weight: map.get(
+  typography-variables.$font-weight-values,
+  "medium"
+);
+$heading--font-weight--bold: map.get(
+  typography-variables.$font-weight-values,
+  "bold"
+);
+$heading--space-y-big: rem(32);
+
+$heading--1: (
+  font-size: rem(32),
+  font-weight: $heading--font-weight,
+  margin: 0 0 $heading--space-y-big 0,
+) !default;
+
+$heading--logo: (
+  color: $color-white,
+  display: inline-block,
+  font-size: rem(32),
+  font-weight: $heading--font-weight,
+  margin: 0,
+) !default;

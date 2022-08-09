@@ -1,0 +1,34 @@
+/** ===== **/
+/** Forms **/
+/** ===== **/
+@use "sass:map";
+@use "./../../00-base/colors/colors.variables" as *;
+@use "./../../00-base/functions/" as *;
+/** ===== **/
+
+$form--default: (
+  align-items: flex-start,
+  bg-color: $color-transparent,
+  display: flex,
+  flex-flow: wrap,
+  justify-content: flex-start,
+  padding: rem(16),
+  item--flex: null,
+  item--width: 100%,
+) !default;
+
+$form--add-user: (
+  align-items: center,
+  bg-color: $color-white,
+  flex-flow: row wrap,
+  padding: rem(16),
+  item--margin: 0 rem(16) 0 0,
+  submit--margin: 0 0 0 auto,
+) !default;
+
+$form--participants: (
+  bg-color: $color-transparent,
+  display: block,
+  padding: rem(8) 0,
+  width: 100%,
+) !default;

@@ -1,0 +1,10 @@
+/** ==== **/
+/** Grid **/
+/** ==== **/
+@use "./../variables/" as *;
+@use "./grid.mixins" as grid-mixins;
+/** ==== **/
+.#{$namespace}-container {
+    @include grid-mixins.make-container;
+    @include grid-mixins.make-container--max-width;
+}

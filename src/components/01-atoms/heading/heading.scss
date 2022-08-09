@@ -1,0 +1,20 @@
+/** ======= **/
+/** Heading **/
+/** ======= **/
+@use "sass:map";
+@use "./../../00-base/variables/" as *;
+@use "./../../00-base/functions/" as *;
+@use "./heading.variables" as heading-variables;
+@use "./heading.mixins" as heading-mixins;
+/** ======= **/
+.#{$namespace}-heading {
+  @include heading-mixins.heading;
+}
+
+.#{$namespace}-heading--1 {
+  @include heading-mixins.heading-variant(heading-variables.$heading--1);
+}
+
+.#{$namespace}-heading--logo {
+  @include heading-mixins.heading-variant(heading-variables.$heading--logo);
+}

@@ -1,0 +1,19 @@
+/** ==== **/
+/** Logo **/
+/** ==== **/
+@use "./../../00-base/variables/" as *;
+@use "./../../00-base/functions/" as *;
+@use "./logo.variables" as logo-variables;
+/** ==== **/
+.#{$namespace}-logo {
+  align-items: center;
+  display: flex;
+  flex-flow: wrap;
+  height: logo-variables.$logo-height;
+  &__link {
+    display: inline-block;
+  }
+  .#{$namespace}-heading--logo {
+    margin-left: rem(32);
+  }
+}

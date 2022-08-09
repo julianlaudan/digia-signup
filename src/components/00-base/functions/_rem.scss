@@ -1,0 +1,22 @@
+@use "sass:math";
+@use "./../typography/typography.variables" as typography-variables;
+
+// Calculating REMs - automatically converts pixels to REMs
+// -------------------------------------------------------------------
+
+// The function takes two arguments, $pixels and $context.
+// $context is optional. The default $context is the $root-font-size = 16 (as defined in the settings).
+// If you use the default context you just specify the pixels you will convert.
+
+// Based on Jake Bresnehan "https://web-design-weekly.com/snippets/converts-pixels-to-ems-with-sass/"
+
+/// @param {Number} $value - Length in pixels
+/// @param {Number} $context - Context in pixels
+/// @return {Number} Length in rems
+
+@function rem($value, $context: typography-variables.$root-font-size) {
+  @if (unitless($value)) {
+    $value: $value * 1px;
+  }
+  @return (math.div($value, $context)) * 1rem;
+}

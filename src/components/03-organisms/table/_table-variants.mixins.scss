@@ -1,0 +1,30 @@
+/** ===== **/
+/** table variants mixins **/
+/** ===== **/
+@use "sass:map";
+@use "./../../00-base/variables/" as *;
+/** ===== **/
+@mixin table-variant($variables, $block: null) {
+  @if $block == null {
+    $block: "&";
+  }
+  border-collapse: map.get($variables, "border-collapse");
+  text-align: map.get($variables, "text-align");
+  width: map.get($variables, "width");
+
+  th {
+    font-size: map.get($variables, "heading--font-size");
+    font-weight: map.get($variables, "heading--font-weight");
+  }
+
+  td {
+    font-size: map.get($variables, "cell--font-size");
+  }
+
+  td,
+  th {
+    height: map.get($variables, "cell--height");
+    line-height: map.get($variables, "cell--line-height");
+    padding: map.get($variables, "cell--padding");
+  }
+}

@@ -1,0 +1,30 @@
+/** ===== **/
+/** tables **/
+/** ===== **/
+@use "sass:map";
+@use "./../../00-base/colors/colors.variables" as *;
+@use "./../../00-base/typography/typography.variables" as typography-variables;
+@use "./../../00-base/functions/" as *;
+/** ===== **/
+
+$table--default: (
+  border-collapse: collapse,
+  text-align: left,
+) !default;
+
+$table--participants: (
+  cell--bg-color--even: $color-white,
+  cell--bg-color--odd: $color-white,
+  cell--hover-bg-color: $color-alabaster,
+  cell--font-size: rem(16),
+  cell--height: rem(72),
+  cell--line-height: rem(24),
+  cell--padding: rem(24),
+  heading--color: $color-boulder,
+  heading--font-size: rem(14),
+  heading--font-weight: map.get(typography-variables.$font-weight-values, bold),
+  row--border-color: $color-borders,
+  row--border-style: solid,
+  row--border-width: rem(1) 0 0 0,
+  width: 100%,
+) !default;

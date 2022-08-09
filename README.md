@@ -1,2 +1,1 @@
-# digia-signup
-Digia Signup React App
+#Digia signup app
